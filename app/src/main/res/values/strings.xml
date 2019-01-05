@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">HariMitti Operator</string>
+
+    <string name="no_location_data_provided">No location data provided</string>
+    <string name="service_not_available">Sorry, the service is not available</string>
+    <string name="invalid_lat_long_used">Invalid latitude or longitude used</string>
+    <string name="no_address_found">Sorry, no address found</string>
+    <string name="err_msg_username">Enter the username</string>
+    <string name="err_msg_id">Enter the Member Id</string>
+    <string name="err_msg_name">Enter the name</string>
+    <string name="err_msg_email">Enter valid email address</string>
+    <string name="err_msg_mobile">Enter valid mobile number</string>
+    <string name="err_msg_address">Enter the address</string>
+    <string name="err_msg_password">Enter the password</string>
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <!-- navigation drawer item labels  -->
+    <string-array name="nav_drawer_activity_labels_maintainer">
+        <item>@string/nav_item_home</item>
+        <item>@string/nav_item_previous</item>
+        <item>@string/nav_item_coming</item>
+        <item>@string/nav_item_feedback</item>
+    </string-array>
+
+    <string-array name="nav_drawer_activity_labels_admin">
+        <item>@string/nav_item_home</item>
+        <item>@string/nav_item_products</item>
+        <item>@string/nav_item_cart</item>
+        <item>@string/nav_item_feedback</item>
+        <item>@string/nav_item_database</item>
+    </string-array>
+
+    <string name="nav_item_home">Dashboard</string>
+    <string name="nav_item_products">Create Allotment</string>
+    <string name="nav_item_cart">Allotments List</string>
+    <string name="nav_item_database">Database Backup</string>
+    <string name="nav_item_previous">Previous Allotments List</string>
+    <string name="nav_item_coming">Coming Allotments List</string>
+    <string name="nav_item_feedback">Feedbacks List</string>
+</resources>

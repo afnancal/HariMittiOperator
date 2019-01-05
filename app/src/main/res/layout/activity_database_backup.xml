@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_databaseBackup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/defaultBackgnd">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <FrameLayout
+            android:id="@+id/container_toolbar_databaseBackup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/toolbar_databaseBackup"
+                layout="@layout/toolbar" />
+
+            <com.afnan.materialsearchlibrary.MaterialSearchView
+                android:id="@+id/search_view_databaseBackup"
+                style="@style/MaterialSearchViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </FrameLayout>
+
+        <View
+            android:id="@+id/view_shadow_databaseBackup"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@+id/container_toolbar_databaseBackup"
+            android:background="@drawable/toolbar_dropshadow" />
+
+        <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/drawer_layout_databaseBackup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view_shadow_databaseBackup">
+
+            <RelativeLayout
+                android:id="@+id/rl_main_databaseBackup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tv_email_databaseBackup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginTop="30dp"
+                    android:text="Database file attachment send to:"
+                    android:textColor="@color/colorTextDark"
+                    android:textSize="17dp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_email_databaseBackup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_email_databaseBackup"
+                    android:layout_marginLeft="7dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentLeft="true"
+                        app:srcCompat="@drawable/ic_email" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/til_email_databaseBackup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="7dp"
+                        android:focusable="false"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="1dp"
+                        android:theme="@style/TextLabel"
+                        app:errorTextAppearance="@style/WelcomeErrorAppearance">
+
+                        <EditText
+                            android:id="@+id/et_email_databaseBackup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Email Id"
+                            android:imeOptions="actionDone"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            android:textSize="15dp" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_submit_databaseBackup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/ll_email_databaseBackup"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="33dp"
+                    android:background="@drawable/btn_background"
+                    android:enabled="false"
+                    android:text="       Send       "
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorTextDark"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_container_databaseBackup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"></RelativeLayout>
+
+            <fragment
+                android:id="@+id/fragment_navigation_drawer_databaseBackup"
+                android:name="com.globopex.harimittioperator.navigationDrawer.FragmentDrawerActivity"
+                android:layout_width="@dimen/nav_drawer_width"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                app:layout="@layout/fragment_nav_drawer_activity"
+                tools:layout="@layout/fragment_nav_drawer_activity" />
+
+        </android.support.v4.widget.DrawerLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

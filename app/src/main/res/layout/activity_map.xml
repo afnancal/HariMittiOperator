@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <com.globopex.harimittioperator.map.CustomFrameLayout
+            android:id="@+id/cfl_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btn_route">
+
+            <fragment xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.afnan.locationtracker.MainActivity" />
+
+        </com.globopex.harimittioperator.map.CustomFrameLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_search"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="9dp"
+            android:background="@drawable/search_background"
+            android:gravity="center_vertical">
+
+            <fragment
+                android:id="@+id/place_autocomplete_fragment"
+                android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_route"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="9dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/btn_background"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="Getting Route"
+            android:textAllCaps="false"
+            android:textColor="@color/colorTextDark"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+</RelativeLayout>

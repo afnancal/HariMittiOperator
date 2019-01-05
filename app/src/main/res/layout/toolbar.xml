@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/defaultBackgnd"
+    android:minHeight="?attr/actionBarSize"
+    tools:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_header_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="-5dp"
+            android:layout_toLeftOf="@+id/rl_headerCart_toolbar">
+
+            <ImageView
+                android:id="@+id/iv_headerLogo_toolbar"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/ic_logo_color" />
+
+            <TextView
+                android:id="@+id/tv_title_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@+id/iv_headerLogo_toolbar"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="Hari Mitti"
+                android:textColor="@color/colorText"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_headerCart_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="7dp">
+
+            <ImageView
+                android:id="@+id/iv_search_toolbar"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/background_pressed"
+                app:srcCompat="@drawable/ic_search" />
+
+            <ImageView
+                android:id="@+id/iv_dotMore"
+                android:layout_width="33dp"
+                android:layout_height="37dp"
+                android:layout_toRightOf="@+id/iv_search_toolbar"
+                android:background="@drawable/background_pressed"
+                app:srcCompat="@drawable/ic_dot_menu" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</android.support.v7.widget.Toolbar>

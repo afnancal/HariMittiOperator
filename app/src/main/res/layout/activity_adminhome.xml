@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AdminHomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <FrameLayout
+            android:id="@+id/container_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+
+            <com.afnan.materialsearchlibrary.MaterialSearchView
+                android:id="@+id/search_view"
+                style="@style/MaterialSearchViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </FrameLayout>
+
+        <View
+            android:id="@+id/view_shadow_adminHome"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@+id/container_toolbar"
+            android:background="@drawable/toolbar_dropshadow" />
+
+        <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/drawer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view_shadow_adminHome">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:paddingBottom="3dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_main_adminHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="30dp"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:id="@+id/ll_mainAllot_adminHome"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="50dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:id="@+id/ll_createMainAllot_adminHome"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="99dp"
+                                    android:layout_height="99dp"
+                                    android:background="@drawable/circle_admin"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        app:srcCompat="@drawable/ic_allotment" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="7dp"
+                                    android:gravity="center"
+                                    android:text="Create Maintainers' Allotment"
+                                    android:textColor="@color/colorText"
+                                    android:textSize="18dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_listMainAllot_adminHome"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="99dp"
+                                    android:layout_height="99dp"
+                                    android:background="@drawable/circle_admin"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        app:srcCompat="@drawable/ic_list_allotment" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="7dp"
+                                    android:gravity="center"
+                                    android:text="List of Maintainers' Allotment"
+                                    android:textColor="@color/colorText"
+                                    android:textSize="18dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_maintainer_adminHome"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ll_mainAllot_adminHome"
+                            android:layout_marginTop="50dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:id="@+id/ll_createMain_adminHome"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="99dp"
+                                    android:layout_height="99dp"
+                                    android:background="@drawable/circle_admin"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="45dp"
+                                        android:layout_height="45dp"
+                                        app:srcCompat="@drawable/ic_maintainer" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="7dp"
+                                    android:gravity="center"
+                                    android:text="Create Maintainer"
+                                    android:textColor="@color/colorText"
+                                    android:textSize="18dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_listMain_adminHome"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="99dp"
+                                    android:layout_height="99dp"
+                                    android:background="@drawable/circle_admin"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        app:srcCompat="@drawable/ic_list_maintainers" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="7dp"
+                                    android:gravity="center"
+                                    android:text="List of Maintainers"
+                                    android:textColor="@color/colorText"
+                                    android:textSize="18dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_member_adminHome"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ll_maintainer_adminHome"
+                            android:layout_marginTop="50dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:id="@+id/ll_createMemb_adminHome"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="99dp"
+                                    android:layout_height="99dp"
+                                    android:background="@drawable/circle_admin"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="45dp"
+                                        android:layout_height="45dp"
+                                        app:srcCompat="@drawable/ic_member" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="7dp"
+                                    android:gravity="center"
+                                    android:text="Create Membership"
+                                    android:textColor="@color/colorText"
+                                    android:textSize="18dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_listMemb_adminHome"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="99dp"
+                                    android:layout_height="99dp"
+                                    android:background="@drawable/circle_admin"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        app:srcCompat="@drawable/ic_list_member" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="7dp"
+                                    android:gravity="center"
+                                    android:text="List of Memberships"
+                                    android:textColor="@color/colorText"
+                                    android:textSize="18dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_admin_adminHome"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ll_member_adminHome"
+                            android:layout_marginTop="50dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:id="@+id/ll_createAdmin_adminHome"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="99dp"
+                                    android:layout_height="99dp"
+                                    android:background="@drawable/circle_admin"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        app:srcCompat="@drawable/ic_admin" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="7dp"
+                                    android:gravity="center"
+                                    android:text="Create Admin"
+                                    android:textColor="@color/colorText"
+                                    android:textSize="18dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_listAdmin_adminHome"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="99dp"
+                                    android:layout_height="99dp"
+                                    android:background="@drawable/circle_admin"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        app:srcCompat="@drawable/ic_list_admin" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="7dp"
+                                    android:gravity="center"
+                                    android:text="List of Admins"
+                                    android:textColor="@color/colorText"
+                                    android:textSize="18dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_feedback_adminHome"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ll_admin_adminHome"
+                            android:layout_marginTop="50dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:id="@+id/ll_listFeedback_adminHome"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="3dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="99dp"
+                                    android:layout_height="99dp"
+                                    android:background="@drawable/circle_admin"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        app:srcCompat="@drawable/ic_feedback" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="7dp"
+                                    android:gravity="center"
+                                    android:text="Feedbacks"
+                                    android:textColor="@color/colorText"
+                                    android:textSize="18dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="3dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <!--<LinearLayout
+                                    android:layout_width="99dp"
+                                    android:layout_height="99dp"
+                                    android:background="@drawable/circle_admin"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        app:srcCompat="@drawable/ic_list_admin" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="7dp"
+                                    android:gravity="center"
+                                    android:text="List of Admins"
+                                    android:textColor="@color/colorText"
+                                    android:textSize="18dp" />-->
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+                </ScrollView>
+
+                <RelativeLayout
+                    android:id="@+id/rl_container_adminHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></RelativeLayout>
+            </RelativeLayout>
+
+            <fragment
+                android:id="@+id/fragment_navigation_drawer"
+                android:name="com.globopex.harimittioperator.navigationDrawer.FragmentDrawer"
+                android:layout_width="@dimen/nav_drawer_width"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                app:layout="@layout/fragment_nav_drawer"
+                tools:layout="@layout/fragment_nav_drawer" />
+
+        </android.support.v4.widget.DrawerLayout>
+    </RelativeLayout>
+</RelativeLayout>

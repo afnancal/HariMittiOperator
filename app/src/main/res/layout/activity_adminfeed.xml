@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_adminFeed"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/defaultBackgnd">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <FrameLayout
+            android:id="@+id/container_toolbar_adminFeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/toolbar_adminFeed"
+                layout="@layout/toolbar" />
+
+            <com.afnan.materialsearchlibrary.MaterialSearchView
+                android:id="@+id/search_view_adminFeed"
+                style="@style/MaterialSearchViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </FrameLayout>
+
+        <View
+            android:id="@+id/view_shadow_adminFeed"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@+id/container_toolbar_adminFeed"
+            android:background="@drawable/toolbar_dropshadow" />
+
+        <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/drawer_layout_adminFeed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/container_toolbar_adminFeed">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:paddingBottom="3dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_main_adminFeed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:paddingBottom="30dp"
+                        android:visibility="visible">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_photoMain_adminFeed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp">
+
+                            <LinearLayout
+                                android:id="@+id/ll_photo1_adminFeed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="7dp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/iv_photo1_adminFeed"
+                                        android:layout_width="100dp"
+                                        android:layout_height="100dp"
+                                        android:layout_marginRight="7dp"
+                                        app:srcCompat="@drawable/ic_plant" />
+
+                                    <TextView
+                                        android:id="@+id/tv_latLng1_adminFeed"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="7dp"
+                                        android:autoLink="map"
+                                        android:gravity="center"
+                                        android:text="Latitude\nLongitude"
+                                        android:textColor="@color/colorAccent" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/iv_photo2_adminFeed"
+                                        android:layout_width="100dp"
+                                        android:layout_height="100dp"
+                                        android:layout_marginRight="7dp"
+                                        android:visibility="gone"
+                                        app:srcCompat="@drawable/ic_plant" />
+
+                                    <TextView
+                                        android:id="@+id/tv_latLng2_adminFeed"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="7dp"
+                                        android:autoLink="map"
+                                        android:gravity="center"
+                                        android:text="22.576823\n88.4341297"
+                                        android:textColor="@color/colorAccent"
+                                        android:visibility="gone" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/iv_photo3_adminFeed"
+                                        android:layout_width="100dp"
+                                        android:layout_height="100dp"
+                                        android:visibility="gone"
+                                        app:srcCompat="@drawable/ic_plant" />
+
+                                    <TextView
+                                        android:id="@+id/tv_latLng3_adminFeed"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="7dp"
+                                        android:autoLink="map"
+                                        android:gravity="center"
+                                        android:text="22.576823\n88.4341297"
+                                        android:textColor="@color/colorAccent"
+                                        android:visibility="gone" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_photo2_adminFeed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ll_photo1_adminFeed"
+                                android:layout_centerHorizontal="true"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/iv_photo4_adminFeed"
+                                        android:layout_width="100dp"
+                                        android:layout_height="100dp"
+                                        android:layout_marginRight="7dp"
+                                        android:visibility="gone"
+                                        app:srcCompat="@drawable/ic_plant" />
+
+                                    <TextView
+                                        android:id="@+id/tv_latLng4_adminFeed"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="7dp"
+                                        android:autoLink="map"
+                                        android:gravity="center"
+                                        android:text="22.576823\n88.4341297"
+                                        android:textColor="@color/colorAccent"
+                                        android:visibility="gone" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/iv_photo5_adminFeed"
+                                        android:layout_width="100dp"
+                                        android:layout_height="100dp"
+                                        android:visibility="gone"
+                                        app:srcCompat="@drawable/ic_plant" />
+
+                                    <TextView
+                                        android:id="@+id/tv_latLng5_adminFeed"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="7dp"
+                                        android:autoLink="map"
+                                        android:gravity="center"
+                                        android:text="22.576823\n88.4341297"
+                                        android:textColor="@color/colorAccent"
+                                        android:visibility="gone" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_feed_adminFeed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rl_photoMain_adminFeed"
+                            android:layout_marginBottom="40dp"
+                            android:layout_marginTop="11dp"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_feedHead_adminFeed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="7dp"
+                                android:gravity="center_vertical"
+                                android:text="Feedback description:"
+                                android:textColor="@color/colorTextDark"
+                                android:textSize="17dp" />
+
+                            <TextView
+                                android:id="@+id/tv_feedback_adminFeed"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/search_background"
+                                android:gravity="top"
+                                android:hint="Description is written here..."
+                                android:padding="7dp"
+                                android:textSize="15dp" />
+
+                            <RelativeLayout
+                                android:id="@+id/rl_audio_adminFeed"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="19dp"
+                                android:background="#dedede"
+                                android:visibility="visible">
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_time_adminFeed"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginRight="16dp"
+                                    android:layout_marginTop="7dp">
+
+                                    <TextView
+                                        android:id="@+id/tv_currentDur"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_alignParentStart="true"
+                                        android:text="8.00"
+                                        android:textColor="#000"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/tv_totalTime"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentRight="true"
+                                        android:text="5.30"
+                                        android:textColor="#000"
+                                        android:textStyle="bold" />
+                                </RelativeLayout>
+
+                                <SeekBar
+                                    android:id="@+id/seekBar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/rl_time_adminFeed"
+                                    android:progressDrawable="@drawable/progress" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/seekBar"
+                                    android:layout_marginBottom="12dp"
+                                    android:layout_marginTop="7dp"
+                                    android:gravity="center_horizontal">
+
+                                    <ImageButton
+                                        android:id="@+id/ib_backward"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginRight="37dp"
+                                        android:background="@drawable/ic_backward" />
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl_playPause_adminFeed"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toRightOf="@+id/ib_backward">
+
+                                        <ImageButton
+                                            android:id="@+id/ib_play"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:background="@drawable/ic_play"
+                                            android:visibility="visible" />
+
+                                        <ImageButton
+                                            android:id="@+id/ib_pause"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:background="@drawable/ic_pause"
+                                            android:visibility="gone" />
+                                    </RelativeLayout>
+
+                                    <ImageButton
+                                        android:id="@+id/ib_forward"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginLeft="37dp"
+                                        android:layout_toRightOf="@+id/rl_playPause_adminFeed"
+                                        android:background="@drawable/ic_forward" />
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="15dp">
+
+                                <TextView
+                                    android:id="@+id/tv_statusTitle_adminFeed"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="17dp"
+                                    android:text="Status: "
+                                    android:textColor="@color/colorTextDark"
+                                    android:textSize="17dp" />
+
+                                <TextView
+                                    android:id="@+id/tv_status_adminFeed"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="9dp"
+                                    android:layout_toRightOf="@+id/tv_statusTitle_adminFeed"
+                                    android:text="Pending"
+                                    android:textColor="@color/colorRed"
+                                    android:textSize="17dp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="15dp">
+
+                                <TextView
+                                    android:id="@+id/tv_paymentTitle_adminFeed"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="17dp"
+                                    android:text="Payment Method:"
+                                    android:textColor="@color/colorTextDark"
+                                    android:textSize="17dp" />
+
+                                <TextView
+                                    android:id="@+id/tv_payment_adminFeed"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="9dp"
+                                    android:layout_toRightOf="@+id/tv_paymentTitle_adminFeed"
+                                    android:text="Cheque"
+                                    android:textSize="17dp" />
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:id="@+id/iv_cheque_adminFeed"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="15dp"
+                                android:visibility="visible"
+                                app:srcCompat="@drawable/ic_cheque" />
+
+                            <RelativeLayout
+                                android:id="@+id/rl_amount_adminFeed"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp">
+
+                                <TextView
+                                    android:id="@+id/tv_amountTitle_adminFeed"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="17dp"
+                                    android:text="Amount:"
+                                    android:textColor="@color/colorTextDark"
+                                    android:textSize="17dp" />
+
+                                <TextView
+                                    android:id="@+id/tv_amount_adminFeed"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="9dp"
+                                    android:layout_toRightOf="@+id/tv_amountTitle_adminFeed"
+                                    android:text="Rs. 299.79"
+                                    android:textSize="17dp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_actionOn_adminFeed"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp">
+
+                                <TextView
+                                    android:id="@+id/tv_actionOnTitle_adminFeed"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="17dp"
+                                    android:text="Action On:"
+                                    android:textColor="@color/colorTextDark"
+                                    android:textSize="17dp" />
+
+                                <TextView
+                                    android:id="@+id/tv_actionOn_adminFeed"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="9dp"
+                                    android:layout_toRightOf="@+id/tv_actionOnTitle_adminFeed"
+                                    android:text="2018/06/09 01:03:44"
+                                    android:textSize="17dp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </ScrollView>
+
+                <RelativeLayout
+                    android:id="@+id/rl_container_adminFeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"></RelativeLayout>
+
+            </RelativeLayout>
+
+            <fragment
+                android:id="@+id/fragment_navigation_drawer_adminFeed"
+                android:name="com.globopex.harimittioperator.navigationDrawer.FragmentDrawerActivity"
+                android:layout_width="@dimen/nav_drawer_width"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                app:layout="@layout/fragment_nav_drawer_activity"
+                tools:layout="@layout/fragment_nav_drawer_activity" />
+
+        </android.support.v4.widget.DrawerLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

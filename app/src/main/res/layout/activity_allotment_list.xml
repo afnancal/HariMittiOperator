@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_allotmentList"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <FrameLayout
+            android:id="@+id/container_toolbar_allotmentList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/toolbar_allotmentList"
+                layout="@layout/toolbar" />
+
+            <com.afnan.materialsearchlibrary.MaterialSearchView
+                android:id="@+id/search_view_allotmentList"
+                style="@style/MaterialSearchViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </FrameLayout>
+
+        <View
+            android:id="@+id/view_shadow_allotmentList"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@+id/container_toolbar_allotmentList"
+            android:background="@drawable/toolbar_dropshadow" />
+
+        <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/drawer_layout_allotmentList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view_shadow_allotmentList">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/rl_main_allotmentList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="7dp"
+                    android:paddingLeft="9dp"
+                    android:paddingRight="9dp"
+                    android:paddingTop="3dp"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/ll_dateText_allotmentList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Date From:"
+                            android:textColor="@color/colorTextDark"
+                            android:textSize="17dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Date To:"
+                            android:textColor="@color/colorTextDark"
+                            android:textSize="17dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_date_allotmentList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ll_dateText_allotmentList"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="3dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="2.1">
+
+                        <EditText
+                            android:id="@+id/et_dateFrom_allotmentList"
+                            android:layout_width="wrap_content"
+                            android:layout_height="37dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/search_background"
+                            android:focusableInTouchMode="false"
+                            android:gravity="center"
+                            android:textSize="15dp" />
+
+                        <EditText
+                            android:id="@+id/et_dateTo_allotmentList"
+                            android:layout_width="wrap_content"
+                            android:layout_height="37dp"
+                            android:layout_marginLeft="9dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/search_background"
+                            android:focusableInTouchMode="false"
+                            android:gravity="center"
+                            android:textSize="15dp" />
+
+                        <ImageView
+                            android:id="@+id/iv_go_allotmentList"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.1"
+                            app:srcCompat="@drawable/ic_right_arrow" />
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_allotment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ll_date_allotmentList"
+                        android:scrollbars="vertical" />
+
+                    <TextView
+                        android:id="@+id/tv_avail_allotmentList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="There is no available allotment."
+                        android:textColor="@color/colorTextForgot"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_container_allotmentList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"></RelativeLayout>
+            </RelativeLayout>
+
+            <fragment
+                android:id="@+id/fragment_navigation_drawer_allotmentList"
+                android:name="com.globopex.harimittioperator.navigationDrawer.FragmentDrawerActivity"
+                android:layout_width="@dimen/nav_drawer_width"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                app:layout="@layout/fragment_nav_drawer_activity"
+                tools:layout="@layout/fragment_nav_drawer_activity" />
+        </android.support.v4.widget.DrawerLayout>
+    </RelativeLayout>
+</RelativeLayout>

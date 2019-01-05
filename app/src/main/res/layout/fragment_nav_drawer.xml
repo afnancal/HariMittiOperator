@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/nav_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@color/colorGreen"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="9dp"
+        android:paddingRight="9dp">
+
+        <com.joooonho.SelectableRoundedImageView
+            android:id="@+id/iv_drawer_pic"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            app:sriv_left_bottom_corner_radius="0dp"
+            app:sriv_left_top_corner_radius="0dp"
+            app:sriv_oval="true"
+            app:sriv_right_bottom_corner_radius="0dp"
+            app:sriv_right_top_corner_radius="0dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_editProfile_drawer"
+            android:layout_toRightOf="@+id/iv_drawer_pic"
+            android:orientation="vertical"
+            android:paddingLeft="9dp"
+            android:paddingRight="7dp">
+
+            <TextView
+                android:id="@+id/tv_drawer_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Guest"
+                android:textColor="@color/colorText"
+                android:textSize="17dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Profile"
+                android:textColor="@color/colorText"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/iv_editProfile_drawer"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            app:srcCompat="@drawable/ic_edit_icon" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/nav_header_container"
+        android:background="@color/defaultBackgnd">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/drawerList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:nestedScrollingEnabled="false" />
+    </RelativeLayout>
+
+</RelativeLayout>

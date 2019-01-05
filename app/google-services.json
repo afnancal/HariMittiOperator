@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "957679874284",
+    "firebase_url": "https://harimitti-operator.firebaseio.com",
+    "project_id": "harimitti-operator",
+    "storage_bucket": "harimitti-operator.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:957679874284:android:3f2b2f560adc4890",
+        "android_client_info": {
+          "package_name": "com.globopex.harimittioperator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "957679874284-jll6o9bo5d3h9okpsbs9b9mue8f4bcag.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.globopex.harimittioperator",
+            "certificate_hash": "4d24607074a0c29d993dbbbd61f970b97222dfd8"
+          }
+        },
+        {
+          "client_id": "957679874284-21u3kk5ncko6spqrqnv0v9gj7c0j6p6q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDT-OHmxe0_k_KH7y6upZ0dzn4hTgYfFow"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "957679874284-21u3kk5ncko6spqrqnv0v9gj7c0j6p6q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

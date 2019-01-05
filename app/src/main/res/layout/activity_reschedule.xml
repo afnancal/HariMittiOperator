@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_reschedule"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/defaultBackgnd">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <FrameLayout
+            android:id="@+id/container_toolbar_reschedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/toolbar_reschedule"
+                layout="@layout/toolbar" />
+
+            <com.afnan.materialsearchlibrary.MaterialSearchView
+                android:id="@+id/search_view_reschedule"
+                style="@style/MaterialSearchViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </FrameLayout>
+
+        <View
+            android:id="@+id/view_shadow_reschedule"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@+id/container_toolbar_reschedule"
+            android:background="@drawable/toolbar_dropshadow" />
+
+        <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/drawer_layout_reschedule"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view_shadow_reschedule">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:paddingBottom="3dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_main_reschedule"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:visibility="visible">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_status_reschedule"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/tv_status_reschedule"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="17dp"
+                                android:text="Status:"
+                                android:textColor="@color/colorTextDark"
+                                android:textSize="17dp" />
+
+                            <com.globopex.harimittioperator.library.DonutLibraryClass.MaterialSpinner
+                                android:id="@+id/spinner_status_reschedule"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="9dp"
+                                android:layout_toRightOf="@+id/tv_status_reschedule"
+                                android:focusable="false"
+                                app:ms_arrowColor="@color/colorTextDark" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_date_reschedule"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/rl_status_reschedule"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:id="@+id/tv_date_reschedule"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:text="Reschedule Date"
+                                android:textColor="@color/colorTextDark"
+                                android:textSize="17dp" />
+
+                            <EditText
+                                android:id="@+id/et_date_reschedule"
+                                android:layout_width="match_parent"
+                                android:layout_height="37dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="7dp"
+                                android:layout_toRightOf="@+id/tv_date_reschedule"
+                                android:background="@drawable/search_background"
+                                android:focusableInTouchMode="false"
+                                android:gravity="center"
+                                android:padding="7dp"
+                                android:textSize="15dp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_time_reschedule"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/rl_date_reschedule"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:id="@+id/tv_time_reschedule"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:text="Reschedule Time"
+                                android:textColor="@color/colorTextDark"
+                                android:textSize="17dp" />
+
+                            <EditText
+                                android:id="@+id/et_time_reschedule"
+                                android:layout_width="match_parent"
+                                android:layout_height="37dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="7dp"
+                                android:layout_toRightOf="@+id/tv_time_reschedule"
+                                android:background="@drawable/search_background"
+                                android:focusableInTouchMode="false"
+                                android:gravity="center"
+                                android:padding="7dp"
+                                android:textSize="15dp" />
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/btn_submit_reschedule"
+                            android:layout_width="wrap_content"
+                            android:layout_height="37dp"
+                            android:layout_below="@+id/rl_time_reschedule"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginTop="33dp"
+                            android:background="@drawable/btn_background"
+                            android:text="SUBMIT"
+                            android:textColor="@color/colorTextDark"
+                            android:textSize="14dp" />
+
+                    </RelativeLayout>
+                </ScrollView>
+
+                <RelativeLayout
+                    android:id="@+id/rl_container_reschedule"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"></RelativeLayout>
+
+            </RelativeLayout>
+
+            <fragment
+                android:id="@+id/fragment_navigation_drawer_reschedule"
+                android:name="com.globopex.harimittioperator.navigationDrawer.FragmentDrawerActivity"
+                android:layout_width="@dimen/nav_drawer_width"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                app:layout="@layout/fragment_nav_drawer_activity"
+                tools:layout="@layout/fragment_nav_drawer_activity" />
+
+        </android.support.v4.widget.DrawerLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
